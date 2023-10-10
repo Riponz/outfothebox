@@ -21,7 +21,6 @@
 
 form{
     height: 42vh;
-    /* background-color: aliceblue ; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;

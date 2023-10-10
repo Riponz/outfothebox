@@ -1,6 +1,6 @@
 .nav{
     color: #7D5BA6;
-    padding: 5px;
+    padding: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,6 +18,10 @@
 .menu{
     /* background-color: aliceblue; */
     width: max-content;
+}
+
+.Home{
+    color: #80ED99;
 }
 
 .menuItems{

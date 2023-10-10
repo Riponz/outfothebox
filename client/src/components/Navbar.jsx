@@ -7,7 +7,7 @@ function Navbar() {
         <nav className='nav'>
             <span className="logo">outꟻothe📦</span>
             <div className="menu">
-                <span className="menuItems">Home</span>
+                <span className="menuItems Home">Home</span>
                 <span className="menuItems">View</span>
                 <span className="menuItems">Account</span>
                 <span className="menuItems">About Us</span>

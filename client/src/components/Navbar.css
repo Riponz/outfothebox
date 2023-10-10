@@ -1,0 +1,27 @@
+.nav{
+    color: #7D5BA6;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 75px;
+    background-color: black;
+}
+
+.logo{
+    margin-left: 10px;
+    font-size: xx-large;
+    font-weight: 600;
+}
+
+.menu{
+    /* background-color: aliceblue; */
+    width: max-content;
+}
+
+.menuItems{
+    font-size: large;
+    font-weight: 500;
+    padding: 0 13px;
+}

@@ -7,6 +7,12 @@
     width: 100vw;
     height: 75px;
     background-color: black;
+    text-decoration: none;
+}
+
+.menuItems{
+    text-decoration: none;
+    color: #7D5BA6;
 }
 
 .logo{

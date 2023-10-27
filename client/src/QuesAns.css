@@ -27,7 +27,15 @@ form{
     align-items: flex-start;
 }
 
+.answer{
+    width: 95%;
+}
+
 .anstext{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
     border-radius: 10px;
     background-color: #2EC4B6;
     border: none;

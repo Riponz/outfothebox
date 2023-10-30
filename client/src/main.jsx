@@ -6,7 +6,6 @@ import App from './App.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-<Router history={browserHistory} routes={routes} />,
   <React.StrictMode>
     <BrowserRouter>
     <App />

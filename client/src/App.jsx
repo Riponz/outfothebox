@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { HashRouter as Routes, Route } from 'react-router-dom'
+import { HashRouter as Router, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import QuesAns from './QuesAns'
 import View from './View'
@@ -12,12 +12,12 @@ function App() {
   return (
     <>
     <Navbar/>
-    <Routes>
+    <Router>
       <Route path='/' element={<QuesAns/>}/>
       <Route path='/view' element={<View/>}/>
       <Route path='/account' element={<Account/> }/>
       <Route path='/about' element={<About/>}/>
-    </Routes>
+    </Router>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { HashRouter as Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import QuesAns from './QuesAns'
 import View from './View'

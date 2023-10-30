@@ -6,7 +6,7 @@ import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter history={browserHistory}>
+    <BrowserRouter history={BrowserHistory}>
     <App />
     </BrowserRouter>
   </React.StrictMode>,

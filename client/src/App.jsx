@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Routes, Route } from 'react-router-dom'
+import { browserHistory, Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import QuesAns from './QuesAns'
 import View from './View'
@@ -12,12 +12,14 @@ function App() {
   return (
     <>
     <Navbar/>
+<Router history={browserHistory}>
     <Routes>
       <Route path='/' element={<QuesAns/>}/>
       <Route path='/view' element={<View/>}/>
       <Route path='/account' element={<Account/> }/>
       <Route path='/about' element={<About/>}/>
     </Routes>
+</Router>
     </>
   )
 }

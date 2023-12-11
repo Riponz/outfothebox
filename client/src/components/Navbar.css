@@ -12,13 +12,18 @@
 
 .menuItems{
     text-decoration: none;
-    color: #7D5BA6;
+    color: #80ED99;
 }
 
 .logo{
     margin-left: 10px;
     font-size: xx-large;
     font-weight: 600;
+}
+
+.logoText{
+    text-decoration: none;
+    color: #80ED99;
 }
 
 .menu{

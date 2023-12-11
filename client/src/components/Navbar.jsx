@@ -6,12 +6,12 @@ function Navbar() {
   return (
     <div>
         <nav className='nav'>
-            <span className="logo"><NavLink to='/'>outꟻothe📦</NavLink></span>
+            <span className="logo"><NavLink className={"logoText"} to='/'>outꟻothe📦</NavLink></span>
             <div className="menu">
-                <span className="menuItems"><NavLink to='/'>Home</NavLink></span>
-                <span className="menuItems"><NavLink to='/view'>View</NavLink></span>
-                <span className="menuItems"><NavLink to='/account'>Account</NavLink></span>
-                <span className="menuItems"><NavLink to='/about'>About Us</NavLink></span>
+                <span><NavLink className={"menuItems"} to='/'>Home</NavLink></span>
+                <span><NavLink className={"menuItems"} to='/view'>View</NavLink></span>
+                <span><NavLink className={"menuItems"} to='/account'>Account</NavLink></span>
+                <span><NavLink className={"menuItems"} to='/about'>About Us</NavLink></span>
             </div>
         </nav>
     </div>

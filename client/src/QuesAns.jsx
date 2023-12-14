@@ -12,15 +12,16 @@ function QuesAns() {
 
   const postRequest =(e) => {
     e.preventDefault()
-    axios.post('/', {
-      answer,
+    axios.post('http://localhost:3000/ans', {
+      answer:answer,
     })
     .then((response) => {
-      console.log(response);
+      console.log(response.data);
     })
     .catch((error) => {
       console.log(error.message);
     });
+    setAnswer("")
   }
 
   return (
@@ -46,6 +47,7 @@ function QuesAns() {
       <form>
         <div className="answer">
           <textarea
+          value={answer}
             onChange={handleAnswer}
             className="anstext"
             name="answer"

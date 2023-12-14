@@ -1,8 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./QuesAns.css";
 import { Typewriter } from "react-simple-typewriter";
+import axios from "axios"
 
 function QuesAns() {
+  const [answer, setAnswer] = useState("");
+
+  const handleAnswer = (e) => {
+    setAnswer(e.target.value);
+  };
+
+  const postRequest =(e) => {
+    e.preventDefault()
+    axios.post('/', {
+      answer,
+    })
+    .then((response) => {
+      console.log(response);
+    })
+    .catch((error) => {
+      console.log(error.message);
+    });
+  }
+
   return (
     <div className="main">
       <div className="ques">
@@ -26,6 +46,7 @@ function QuesAns() {
       <form>
         <div className="answer">
           <textarea
+            onChange={handleAnswer}
             className="anstext"
             name="answer"
             cols="150"
@@ -34,10 +55,11 @@ function QuesAns() {
           ></textarea>
         </div>
 
-        <button className="submit" type="submit">
+        <button onClick={postRequest} className="submit" type="submit">
           submit
         </button>
       </form>
+      {/* {console.log(answer)} */}
     </div>
   );
 }

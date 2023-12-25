@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./QuesAns.css";
 import { Typewriter } from "react-simple-typewriter";
 import axios from "axios"
+import {BASE_URL} from "./utility/links"
 
 function QuesAns() {
   const [answer, setAnswer] = useState("");
@@ -12,7 +13,7 @@ function QuesAns() {
 
   const postRequest =(e) => {
     e.preventDefault()
-    axios.post('http://localhost:3000/ans', {
+    axios.post(`${BASE_URL}/postAns`, {
       answer:answer,
     })
     .then((response) => {
@@ -61,7 +62,6 @@ function QuesAns() {
           submit
         </button>
       </form>
-      {/* {console.log(answer)} */}
     </div>
   );
 }

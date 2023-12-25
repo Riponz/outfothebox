@@ -19,6 +19,8 @@ app.use(
 
 const PORT = 3000;
 
+/**********DATABASE CONNECTION**********/
+
 mongoose.set("strictQuery", false);
 mongoose.connect(
   "mongodb+srv://cyphenx:Riponbiswas1%40@outfothebox.qudzfye.mongodb.net/?retryWrites=true&w=majority",
@@ -33,11 +35,16 @@ db.on("error", (error) => {
 });
 db.once("open", () => console.log("database connected"));
 
-app.post("/ans", async (req, res) => {
+
+
+/**********POST ANSWER**********/
+
+app.post("/postAns", async (req, res) => {
   const ans = req.body.answer;
-  console.log(req.body.answer);
+  // const user = req.body.user;
 
   const post = new postSchema({
+    // name: user,
     content: ans,
   });
 
@@ -47,22 +54,16 @@ app.post("/ans", async (req, res) => {
   });
 });
 
-app.get("/", async (req, res) => {
-  const user = new userSchema({
-    name: "Diganta",
-    email: "1@gmail.com",
-    userid: "1",
-    password: "1234",
-  });
-  const ret = await user.save();
-  res.json({
-    ret,
-  });
-});
 
-app.get("/view", async (req, res) => {
-  const data = await postSchema.find();
-  res.json({ data });
+
+/**********GET ALL THE ANSWERS**********/
+
+app.get("/getData", async (req, res) => {
+  const posts = await postSchema.find();
+  
+  res.json({
+    posts,
+  });
 });
 
 app.listen(PORT, () => {

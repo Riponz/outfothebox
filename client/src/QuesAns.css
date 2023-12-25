@@ -15,6 +15,7 @@
 }
 
 .question{
+    font-family: 'Abril Fatface', serif;
     font-size: 3rem;
     color: #80ED99;
 }
@@ -32,19 +33,26 @@ form{
 }
 
 .anstext{
+    font-family: 'Abril Fatface', serif;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    /* font-size: large; */
+    outline: none;
     width: 100%;
     border-radius: 10px;
     background-color: #2EC4B6;
     border: none;
     padding: 6px;
+    position: static;
 }
 
 .submit{
+    font-family: 'Abril Fatface', serif;
+    position: relative;
+    margin-top: 10px;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
     padding: 10px;
     width: max-content;
     height: max-content;

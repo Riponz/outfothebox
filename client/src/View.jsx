@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./View.css";
 import axios from "axios";
+import { BASE_URL } from "./utility/links";
 
 function View() {
   const [date, setDate] = useState([])
   useEffect(() => {
     axios
-      .get("http://localhost:3000/view")
+      .get(`${BASE_URL}/getData`)
       .then((res) => {
-        const resp =res;
-        setDate(res.data.data);
+        setDate(res.data.posts);
       })
       .catch((err) => {
         console.log(err.message);
@@ -21,7 +21,6 @@ function View() {
       {date.map((answer) => {
         return <div className="card">{answer.content}</div>;
       })}
-      {/* {console.log(date)} */}
     </div>
   );
 }

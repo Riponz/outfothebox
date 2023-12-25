@@ -43,6 +43,7 @@
 
 @media only screen and (max-width: 670px) {
     .nav {
+        height: 90px;
         display: flex;
         flex-direction: column;
         justify-content: center;

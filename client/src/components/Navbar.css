@@ -1,4 +1,4 @@
-.nav{
+.nav {
     color: #7D5BA6;
     padding: 8px;
     display: flex;
@@ -10,33 +10,48 @@
     text-decoration: none;
 }
 
-.menuItems{
+.menuItems {
     text-decoration: none;
     color: #80ED99;
 }
 
-.logo{
+.logo {
     margin-left: 10px;
     font-size: xx-large;
     font-weight: 600;
 }
 
-.logoText{
+.logoText {
     text-decoration: none;
     color: #80ED99;
 }
 
-.menu{
+.menu {
     /* background-color: aliceblue; */
     width: max-content;
 }
 
-.Home{
+.Home {
     color: #80ED99;
 }
 
-.menuItems{
+.menuItems {
     font-size: large;
     font-weight: 500;
     padding: 0 13px;
+}
+
+@media only screen and (max-width: 670px) {
+    .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo{
+        margin-bottom: 10px;
+    }
+    .menuItems{
+        font-weight: bold;
+    }
 }
